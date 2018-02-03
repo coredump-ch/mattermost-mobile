@@ -1982,7 +1982,7 @@
   "mobile.commands.error_title": "Fehler beim Ausführen des Befehls",
   "mobile.components.channels_list_view.yourChannels": "Ihre Kanäle:",
   "mobile.components.error_list.dismiss_all": "Alle verwerfen",
-  "mobile.components.select_server_view.connect": "Verbunden",
+  "mobile.components.select_server_view.connect": "Verbinden",
   "mobile.components.select_server_view.connecting": "Verbinde...",
   "mobile.components.select_server_view.continue": "Weiter",
   "mobile.components.select_server_view.enterServerUrl": "Geben Sie die Server-URL ein",
