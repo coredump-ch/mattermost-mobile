@@ -47,7 +47,8 @@ cd fastlane && bundle install && cd ..
 set -x
 cp "$GOOGLE_SERVICES_JSON" android/app/google-services.json
 PROJECT_NUMBER=$(grep '"project_number": "[0-9]*"' $GOOGLE_SERVICES_JSON | sed 's/.*"\([0-9]*\)".*/\1/')
-sed -i 's/gcmSenderId" android:value="[0-9]*\\0"/gcmSenderId" android:value="'$PROJECT_NUMBER'\\0"/' android/app/src/main/AndroidManifest.xml
+grep -i 'gcmSenderId" android:value="[0-9]*' android/app/src/main/AndroidManifest.xml || (echo "Error: sender id pattern not found" && exit 1)
+sed -i 's/gcmSenderId" android:value="[0-9]*/gcmSenderId" android:value="'$PROJECT_NUMBER'/' android/app/src/main/AndroidManifest.xml
 set +x
 
 # Prepare

@@ -6,7 +6,7 @@
 #             -v /home/danilo/Documents/Coredump/Sync/Chat/:/out \
 #             coredump/mattermost-mobile-build:latest /bin/bash build.sh
 
-FROM circleci/android:api-28-node
+FROM circleci/android:api-27-node
 
 # Generate locales
 RUN sudo bash -c "echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen"
